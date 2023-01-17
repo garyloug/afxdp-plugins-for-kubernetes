@@ -1,4 +1,5 @@
 # AF_XDP Plugins for Kubernetes
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/intel/afxdp-plugins-for-kubernetes/badge)](https://api.securityscorecards.dev/projects/github.com/intel/afxdp-plugins-for-kubernetes)
 
 A Kubernetes device plugin and CNI plugin to provide AF_XDP networking to Kubernetes pods.
 ## Prerequisites
