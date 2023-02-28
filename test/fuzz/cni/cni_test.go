@@ -21,6 +21,7 @@ import (
 	"github.com/containernetworking/cni/pkg/skel"
 	"github.com/intel/afxdp-plugins-for-kubernetes/internal/cni"
 	"k8s.io/apimachinery/pkg/util/uuid"
+	"testing"
 )
 
 const (
@@ -37,7 +38,7 @@ The input data is considered:
   - interesting if it does not result in an error, input priority increases for subsequent fuzzing
   - discard if it will not unmarshall, so we don't just end up testing the json.Unmarshall function
 */
-func FuzzAdd(data []byte) int {
+func FuzzAdd(t* testing.F, data []byte) int {
 	tmp := &cni.NetConfig{}
 	if err := json.Unmarshal(data, tmp); err != nil {
 		return discard
