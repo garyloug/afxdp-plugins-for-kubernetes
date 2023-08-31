@@ -47,7 +47,7 @@ builddp: buildc
 buildcni: buildc
 	@echo "******     Build CNI     ******"
 	@echo
-	go build -o ./bin/afxdp ./cmd/cni
+	go build -ldflags="-extldflags=-static" -tags netgo -o ./bin/afxdp ./cmd/cni
 	@echo
 	@echo
 
